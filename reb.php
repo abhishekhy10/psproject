@@ -47,6 +47,6 @@ $sql = "INSERT INTO `pgreg`(`fName`, `Lname`, `email`, `Mnumber`,`address`, `dis
       } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
       }
-    header("Location: http://localhost/psproject/ty.html");
+    header("Location: http://app-4928d205-92c5-431e-b257-72cf0bde845a.cleverapps.io/ty.html");
     exit;
 ?>
