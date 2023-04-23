@@ -26,10 +26,10 @@ $pimage=$_POST['pimage'];
 
 $staying = $_POST['staying'];
 
-$servername = "localhost";
-$username = "root";
-$passwords = "";
-$dbname = "psproject";
+$servername = "bccke2y5ddigh2ys64s6-mysql.services.clever-cloud.com";
+$username = "us2ovatpyrtjpuny";
+$passwords = "LTFjRxxzT7W8Z9t49OdX";
+$dbname = "bccke2y5ddigh2ys64s6";
 
 // Create connection
 $conn = mysqli_connect($servername,$username,$passwords,$dbname);
