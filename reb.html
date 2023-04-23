@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="wnameth=device-wnameth, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="reb.css">
+     
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Responsive Regisration Form </title> 
+</head>
+<body>
+    
+    <div  class="container">
+        <header>Registration For Ritu Paradise</header>
+        
+      
+        
+        <form  method="post" action="reb.php">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">Personal Details</span>
+                    
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>First Name</label>
+                            <input type="text" autocomplete="off"  name="fName" placeholder="Enter your first name" required >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Last Name</label>
+                            <input type="text" autocomplete="off" name="Lname" placeholder="Enter your last name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="text" name="email" autocomplete="off" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mobile Number</label>
+                            <input type="text" name="Mnumber" autocomplete="off" placeholder="Enter mobile number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>District</label>
+                            <input type="text" name="district" autocomplete="off" placeholder="Enter District" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>State</label>
+                            <input type="text" name="state" autocomplete="off" placeholder="Enter state" required>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="details name">
+                    <span class="title">More Personal Details</span>
+                    <div class="status"required >
+                        <input type="radio" id="staying" name="staying" value="staying" autocomplete="off" required>
+                        <label for="staying">STAYING</label>
+                        <input type="radio" id="left" name="staying" value="left" autocomplete="off" required>
+                        <label for="left">LEFT</label>
+                    </div>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Flat No</label>
+                            <!-- <input type="text" name="flat" autocomplete="off" placeholder="Enter flate no." required> -->
+                            <select class="form-control"  placeholder="Enter flat no." name="slct1" id="slct1" onchange="populate(this.id,'slct2')" autocomplete="off" required>
+                                <option value disabled selected>Enter flat no.</option>
+                                <option value="101">101</option>
+                                <option value="102">102</option>
+                                <option value="103">103</option>
+                                <option value="201">201</option>
+                                <option value="202">202</option>
+                                <option value="203">203</option>
+                                <option value="301">301</option>
+                                <option value="302">302</option>
+                                <option value="303">303</option>
+                                <option value="401">401</option>
+                                <option value="402">402</option>
+                                <option value="403">403</option>
+                              </select>
+                        </div>
+
+                        <div class="input-field">
+                            <label for="">bedNo</label>
+                            <select class="form-control" id="slct2" autocomplete="off" name="slct2" required>
+                               <option value disabled selected>Enter your alloted Bed number</option>
+                                        </select>
+
+                        </div>
+                        
+
+                        <div class="input-field">
+                            <label>Pin</label>
+                            <input type="text" name="pin" autocomplete="off" placeholder="Enter pin" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Address details</label>
+                            <input type="textArea" autocomplete="off" name='address' placeholder="Enter issued state" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Aadhar No. </label>
+                            <input type="text" name="anumber" autocomplete="off" placeholder="Enter your Aadhar No. " required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Date Of joining PG</label>
+                            <input type="date" name="djoin" autocomplete="off" placeholder="Enter date" required>
+                        </div>
+                    </div>
+                  
+                    <button class="nextBtn">
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                </div> 
+            </div>
+
+            <div class="form second">
+             
+                <div class="details address">
+                    <span class="title">Work Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Occupation</label>
+                            <input type="text" name="occupation" autocomplete="off" placeholder="Occupation" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Name of the organization</label>
+                            <input type="text" name="nameorg" autocomplete="off" placeholder="Enter name of the organization" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Organization Address</label>
+                            <input type="text" name="occAddress" autocomplete="off" placeholder="Address Of the Workplace" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Post held</label>
+                            <input type="text" name="postheld" autocomplete="off" placeholder="Enter the post held" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Upload Supporting Documents</label>
+                            <input type="file" name="simage" autocomplete="off" placeholder="Document Photo" >
+                        </div>
+
+                        <div class="input-field">
+                            <label>Workplace Location</label>
+                            <input type="text" name="city" autocomplete="off" placeholder="Enter city" required>
+                        </div> 
+                    </div>
+                </div>
+
+                <div class="details family">
+                    <span class="title">Referral Details</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>First Name Reference(Full Name)</label>
+                            <input type="text" name="frname" autocomplete="off" placeholder="Enter name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Phone number for the same</label>
+                            <input type="text" name="phoneref1" autocomplete="off" placeholder="Enter phone number" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Second name Reference(Full Name)</label>
+                            <input type="text" name="srname" autocomplete="off" placeholder="Enter second name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Phone number for the same</label>
+                            <input type="text" name="phoneref2" autocomplete="off" placeholder="Enter phone number for ref 2" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Upload Aadhar card</label>
+                            <input type="file" autocomplete="off" name="aimage"placeholder="Please Upload your aadhar card copy" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Upload Passport Size Photo</label>
+                            <input type="file" autocomplete="off"  name="pimage" placeholder="Passport Size Photo" required>
+                        </div>
+                       
+                    </div>
+
+                    <div class="buttons">
+                        <div class="backBtn">
+                            <i class="uil uil-navigator"></i>
+                            <span class="btnText">Back</span>
+                        </div>
+                        
+                        <button type="submit"  class="sumbit">
+                            <span class="btnText">Submit</span>
+                            <i class="uil uil-navigator"></i>
+                        </button>
+                    </div>
+                </div> 
+            </div>
+        </form>
+    </div>
+
+    <script src="reb.js"></script>
+</body>
+</html>
