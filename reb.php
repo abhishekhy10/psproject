@@ -31,6 +31,7 @@ $username = "us2ovatpyrtjpuny";
 $passwords = "LTFjRxxzT7W8Z9t49OdX";
 $dbname = "bccke2y5ddigh2ys64s6";
 
+
 // Create connection
 $conn = mysqli_connect($servername,$username,$passwords,$dbname);
 	if(!$conn){
@@ -47,6 +48,5 @@ $sql = "INSERT INTO `pgreg`(`fName`, `Lname`, `email`, `Mnumber`,`address`, `dis
       } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
       }
-    header("Location: http://app-4928d205-92c5-431e-b257-72cf0bde845a.cleverapps.io/ty.html");
     exit;
 ?>
